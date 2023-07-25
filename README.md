@@ -3,8 +3,8 @@ This repository contains the materials and scripts for the following paper:
 *Comparing models of pronoun production and interpretation with observational and experimental evidence*.
 
 To ensure smooth execution of the scripts, it is highly recommended that you **download the ENTIRE repository**. Note that:
- * Analysis scripts are written in <span style="color: orange;">R version 4.1.2 (2021-11-01)</span>
- * Python scripts are written in <span style="color: orange;">Python version 3.7.4 (2019-08-13)</span> 
+ * Analysis scripts are written in __R version 4.1.2 (2021-11-01)__
+ * Python scripts are written in __Python version 3.7.4 (2019-08-13)__ 
  * Required to run scripts in the script directory
 
 

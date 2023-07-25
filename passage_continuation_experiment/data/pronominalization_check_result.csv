@@ -1,0 +1,178 @@
+,subject_id,condition,text,referents,prompt,relation,connective,itemID,stimulusID,annotated_nm,response,pronominalization,Annotator1
+5130,10526983,LIST4,Hailey told her daughter what to ask for. So,"[""Hailey"",""her daughter""]",bare,Result,original,19,179,1,she did it,pro,T
+3158,13925376,LIST3,Joseph served Nicolas for three years. Then,"[""Joseph"",""Nicolas""]",bare,Narration,original,6,49,0,He found new employment and moved away.,pro,T
+2332,7217742,LIST3,"Adam refused to stop chasing Leo. Shortly afterwards,","[""Adam"",""Leo""]",bare,Narration,varied,11,157,0,He punched him,pro,T
+5164,16271598,LIST2,David was moving as quickly as possible to get away from Saul. So,"[""David"",""Saul""]",bare,Result,varied,15,95,0,he started running.,pro,T
+360,11146272,LIST1,David had just let Leo leave in peace. But,"[""David"",""Leo""]",bare,Contrast,varied,14,94,1,Leo felt sad,non_pro,T
+1260,9409789,LIST3,"The Iran-Contra judge Harold H. Greene agreed to allow Mr. Poindexter to subpoena the personal papers of ex-President Reagan, ruling that there was sufficient evidence that the data would be important to the defense. And then","[""The Iran - Contra judge Harold H. Greene"",""Mr. Poindexter""]",bare,Narration,varied,29,85,0,he closed the case.,pro,T
+402,11494083,LIST3,"For balance, and in hopes of gaining some disaffected centrist votes, Mr. Papandreou managed to attract Mr. Makris, a former New Democracy Party representative and known political enemy of Mr. Mitsotakis. Thus","[""Mr. Papandreou "",""Mr. Makris""]",bare,Result,original,17,137,0,he gained their support.,pro,T
+5124,9284722,LIST4,Peter criticized Jeffery for saying these things. But,"[""Peter"",""Jeffery""]",bare,Contrast,original,26,117,1,Jeffery didnt care.,non_pro,T
+1526,6739326,LIST5,Joseph served Nicolas for three years. But,"[""Joseph"",""Nicolas""]",bare,Contrast,varied,6,51,0,he was tired of it,pro,T
+3208,12129454,LIST1,David had just let Leo leave in peace. But,"[""David"",""Leo""]",bare,Contrast,varied,14,94,0,he was sorry he did,pro,T
+2524,11861189,LIST6,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Therefore,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Result,varied,2,6,0,he placed first.,pro,T
+5658,10021696,LIST2,Jose gave the silver and the gold to Peter. But,"[""Jose"",""Peter""]",bare,Contrast,original,24,105,1,he couldn't carry it all.,pro,T
+2356,14299503,LIST5,Adam refused to stop chasing Leo. But,"[""Adam"",""Leo""]",bare,Contrast,varied,11,159,1,Leo was relentless and never stopped running.,non_pro,T
+5876,10085674,LIST2,Philip went and told Andrew. Then,"[""Philip"",""Andrew""]",bare,Narration,original,3,43,1,Andrew did not know what to do with this information,non_pro,T
+4884,7854344,LIST2,John felt sorry for the man. So,"[""John"",""the man""]",bare,Result,original,22,167,0,he gave a donation.,pro,T
+2900,2562134,LIST1,"Jack said to another man, ""Follow me!"" After that,","[""Jack"",""another man""]",bare,Narration,varied,21,68,0,he felt safer,pro,T
+254,4701919,LIST2,"And Lehia's been with her mom for two months. However,","[""Lehia"",""her mom""]",bare,Contrast,varied,12,141,0,she missed her father.,pro,T
+4788,8155371,LIST3,John had fought against Hector. So,"[""John"",""Hector""]",bare,Result,varied,23,101,0,He knew just how strong he was.,pro,T
+5758,14062877,LIST4,"John felt sorry for the man. Later,","[""John"",""the man""]",bare,Narration,varied,22,163,0,He bought him a card.,pro,T
+2560,7139274,LIST1,President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. So,"[""President Clinton"",""the Crown Prince""]",bare,Result,original,27,53,0,he could get what he wanted.,pro,T
+4140,5139291,LIST2,David was moving as quickly as possible to get away from Saul. So,"[""David"",""Saul""]",bare,Result,varied,15,95,0,he ran,pro,T
+3418,7269592,LIST2,Philip went and told Andrew. Then,"[""Philip"",""Andrew""]",bare,Narration,original,3,43,0,he went off to the pub with the others.,pro,T
+2128,2936130,LIST6,John felt sorry for the man. But,"[""John"",""the man""]",bare,Contrast,varied,22,88,0,it was ultimately not his problem and he carried on walking.,pro,T
+3412,7269592,LIST2,David left the food with the man who kept supplies. But,"[""David"",""the man who kept supplies""]",bare,Contrast,varied,9,33,0,he took some water with him.,pro,T
+5226,10665345,LIST6,William was afraid and refused to kill Saul. So,"[""William"",""Saul""]",bare,Result,original,30,78,1,Saul escaped and he killed again.,non_pro,T
+306,7747279,LIST4,Hailey told her daughter what to ask for. So,"[""Hailey"",""her daughter""]",bare,Result,original,19,179,1,"she did the exact opposite, just to prove a point.",pro,T
+3780,6040032,LIST5,"John had fought against Hector. After that,","[""John"",""Hector""]",bare,Narration,varied,23,97,0,he took his rest.,pro,T
+1460,12506341,LIST5,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. However,","[""President Clinton"",""the Crown Prince""]",bare,Contrast,varied,27,123,0,he didn't get the answers he needed,pro,T
+5892,5994857,LIST1,"For balance, and in hopes of gaining some disaffected centrist votes, Mr. Papandreou managed to attract Mr. Makris, a former New Democracy Party representative and known political enemy of Mr. Mitsotakis. However,","[""Mr. Papandreou "",""Mr. Makris""]",bare,Contrast,varied,17,63,0,he has remained true to his own political beliefs.,pro,T
+5848,12126682,LIST5,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. However,","[""President Clinton"",""the Crown Prince""]",bare,Contrast,varied,27,123,1,the crown prince was having none of it.,non_pro,T
+4662,5254820,LIST6,"And Lehia's been with her mom for two months. After that,","[""Lehia"",""her mom""]",bare,Narration,varied,12,67,0,she's going on holiday.,pro,T
+4560,1778955,LIST4,And Lehia's been with her mom for two months. So,"[""Lehia"",""her mom""]",bare,Result,original,12,143,0,she misses her dad.,pro,T
+478,10445894,LIST6,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Therefore,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Result,varied,2,6,0,hummer won the tournament,non_pro,T
+1214,4793005,LIST6,Philip went and told Andrew. So,"[""Philip"",""Andrew""]",bare,Result,varied,3,11,1,andrew told his mum,non_pro,T
+2616,13617331,LIST3,Joseph served Nicolas for three years. Then,"[""Joseph"",""Nicolas""]",bare,Narration,original,6,49,0,he sought work elsewhere.,pro,T
+4748,13416907,LIST2,John felt sorry for the man. So,"[""John"",""the man""]",bare,Result,original,22,167,0,he offered to help.,pro,T
+2028,252898,LIST1,"Jack said to another man, ""Follow me!"" After that,","[""Jack"",""another man""]",bare,Narration,varied,21,68,1,the man followed him.,non_pro,T
+3578,12662317,LIST6,"And Lehia's been with her mom for two months. After that,","[""Lehia"",""her mom""]",bare,Narration,varied,12,67,0,Lehia decided to move out.,non_pro,T
+308,7747279,LIST4,David left the food with the man who kept supplies. So,"[""David"",""the man who kept supplies""]",bare,Result,varied,9,35,0,"he considered the job done, despite not speaking John.",pro,T
+4470,12101803,LIST5,Joseph served Nicolas for three years. But,"[""Joseph"",""Nicolas""]",bare,Contrast,varied,6,51,1,Nicolas didn't serve Joseph.,non_pro,T
+4144,5139291,LIST2,"Charles got up, left everything, and followed Thomas. So","[""Charles"",""Thomas""]",bare,Result,varied,7,59,1,Thomas ran,non_pro,T
+3230,1079574,LIST5,Felix made a sign for Paul to speak. So,"[""Felix"",""Paul""]",bare,Result,original,16,149,1,he knew when to talk,pro,T
+4480,12101803,LIST5,Felix made a sign for Paul to speak. So,"[""Felix"",""Paul""]",bare,Result,original,16,149,1,Paul spoke.,non_pro,T
+4624,3231696,LIST5,Felix made a sign for Paul to speak. So,"[""Felix"",""Paul""]",bare,Result,original,16,149,1,Paul cleared his throat and began too address the audience.,non_pro,T
+1890,9767700,LIST5,Adam refused to stop chasing Leo. But,"[""Adam"",""Leo""]",bare,Contrast,varied,11,159,0,eventually he did.,pro,T
+496,10041626,LIST5,Felix made a sign for Paul to speak. So,"[""Felix"",""Paul""]",bare,Result,original,16,149,1,Paul said his piece and then left the stage.,non_pro,T
+4472,12101803,LIST5,"Jack said to another man, ""Follow me!"" Therefore,","[""Jack"",""another man""]",bare,Result,varied,21,113,0,he did,pro,T
+1554,3044184,LIST5,"Senate Majority Leader George Mitchell (D-Maine), who has been the most prominent Democratic critic of Mr. Bush's handling of the Soviet relationship, praised the president for arranging the meeting. After that,","[""Senate Majority Leader George Mitchell (D-Maine)"",""the president""]",bare,Narration,varied,10,61,0,the talks were successful,non_pro,T
+3958,15823829,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,he established the truth.,pro,T
+3174,13925376,LIST3,"In 1975, Mr. Pamplin enticed Mr. Hahn into joining the company as executive vice president in charge of chemicals; the move befuddled many in Georgia-Pacific who didn't believe a university administrator could make the transition to the corporate world. But","[""Mr. Pamplin"",""Mr. Hahn""]",bare,Contrast,original,20,75,1,he had turn out to be the perfect appointment.,pro,T
+832,15347327,LIST6,William was afraid and refused to kill Saul. So,"[""William"",""Saul""]",bare,Result,original,30,78,0,he fled instead.,pro,T
+1924,1921090,LIST6,David left the food with the man who kept supplies. Then,"[""David"",""the man who kept supplies""]",bare,Narration,original,9,26,0,he went to get his car.,pro,T
+5072,12345871,LIST5,"John had fought against Hector. After that,","[""John"",""Hector""]",bare,Narration,varied,23,97,0,HE DECIDED HE SHOULD CALL A TRUCE.,pro,T
+2794,4402535,LIST1,"Joseph served Nicolas for three years. Therefore,","[""Joseph"",""Nicolas""]",bare,Result,varied,6,17,0,he felt asking for a raise was not unreasonable.,pro,T
+2458,11319780,LIST6,Philip went and told Andrew. So,"[""Philip"",""Andrew""]",bare,Result,varied,3,11,1,Andrew lied about what really happened.,non_pro,T
+5410,2057757,LIST4,"John felt sorry for the man. Later,","[""John"",""the man""]",bare,Narration,varied,22,163,0,john tried to help,non_pro,T
+5428,2057757,LIST4,"David was moving as quickly as possible to get away from Saul. Later,","[""David"",""Saul""]",bare,Narration,varied,15,91,1,saul caught up,non_pro,T
+1356,11340110,LIST1,John had fought against Hector. But,"[""John"",""Hector""]",bare,Contrast,original,23,58,0,alas he didn't win,pro,T
+2832,10711128,LIST3,"Jack said to another man, ""Follow me!"" But","[""Jack"",""another man""]",bare,Contrast,original,21,111,1,he didn't listen and ran off in the opposite direction.,pro,T
+1754,138393,LIST3,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. Later,","[""President Clinton"",""the Crown Prince""]",bare,Narration,varied,27,121,1,the Crown Prince was found missing.,non_pro,T
+2492,7227216,LIST1,"For balance, and in hopes of gaining some disaffected centrist votes, Mr. Papandreou managed to attract Mr. Makris, a former New Democracy Party representative and known political enemy of Mr. Mitsotakis. However,","[""Mr. Papandreou "",""Mr. Makris""]",bare,Contrast,varied,17,63,0,he didn't gain the votes he hoped for,pro,T
+2944,10798364,LIST2,"Hailey told her daughter what to ask for. However,","[""Hailey"",""her daughter""]",bare,Contrast,varied,19,177,1,she ordered something different.,pro,T
+2082,13783915,LIST3,"Adam refused to stop chasing Leo. Shortly afterwards,","[""Adam"",""Leo""]",bare,Narration,varied,11,157,0,he stopped and waited.,pro,T
+5042,6578168,LIST5,"Senate Majority Leader George Mitchell (D-Maine), who has been the most prominent Democratic critic of Mr. Bush's handling of the Soviet relationship, praised the president for arranging the meeting. After that,","[""Senate Majority Leader George Mitchell (D-Maine)"",""the president""]",bare,Narration,varied,10,61,0,he pressed for further change,pro,T
+2860,3639975,LIST2,David left the food with the man who kept supplies. But,"[""David"",""the man who kept supplies""]",bare,Contrast,varied,9,33,0,worried if he would keep it safe.,pro,F
+1788,2069485,LIST2,"Charles got up, left everything, and followed Thomas. So","[""Charles"",""Thomas""]",bare,Result,varied,7,59,0,he can follow his dream,pro,T
+2898,2562134,LIST1,"Joseph served Nicolas for three years. Therefore,","[""Joseph"",""Nicolas""]",bare,Result,varied,6,17,0,he knew him well,pro,T
+3164,13925376,LIST3,Mark Felt sends this memo to the acting FBI director Al Patrick Grey. And then,"[""Mark Felt"",""the acting FBI director Al Patrick Grey.""]",bare,Narration,original,4,13,0,he cleared his desk and walked out.,pro,T
+3880,569798,LIST6,David was moving as quickly as possible to get away from Saul. But,"[""David"",""Saul""]",bare,Contrast,original,15,52,0,no no matter how fast he ran he could not get away from Saul,pro,T
+4510,6891901,LIST3,Felix made a sign for Paul to speak. But,"[""Felix"",""Paul""]",bare,Contrast,varied,16,147,1,Paul couldn't read it,non_pro,T
+540,14097695,LIST3,"Adam refused to stop chasing Leo. Shortly afterwards,","[""Adam"",""Leo""]",bare,Narration,varied,11,157,0,Adam fell over.,non_pro,T
+216,16516386,LIST4,"Benjamin Netanyahu has recently moved ahead of Ehud Barak in popularity polls. As a result,","[""Benjamin Netanyahu"",""Ehud Barak""]",bare,Result,varied,13,71,0,he has earned more contracts.,pro,T
+908,2876904,LIST6,"Hailey told her daughter what to ask for. After that,","[""Hailey"",""her daughter""]",bare,Narration,varied,19,98,0,"She left her to it, as she wanted to give her the opportunity to do it on her own.",pro,T
+3392,7269592,LIST2,Jose gave the silver and the gold to Peter. But,"[""Jose"",""Peter""]",bare,Contrast,original,24,105,0,he kept the diamonds for himself.,pro,T
+2530,11861189,LIST6,Philip went and told Andrew. So,"[""Philip"",""Andrew""]",bare,Result,varied,3,11,1,Andrew told everyone else.,non_pro,T
+2276,4096729,LIST2,"And Lehia's been with her mom for two months. However,","[""Lehia"",""her mom""]",bare,Contrast,varied,12,141,0,She was soon to leave for New York.,pro,T
+4166,5139291,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,he desided to arange a meeting,pro,T
+4350,1286318,LIST1,John had fought against Hector. But,"[""John"",""Hector""]",bare,Contrast,original,23,58,1,Hector was strong.,non_pro,T
+446,931824,LIST3,Felix made a sign for Paul to speak. But,"[""Felix"",""Paul""]",bare,Contrast,varied,16,147,1,he wasn't forthcoming.,pro,T
+702,14200474,LIST2,"Hailey told her daughter what to ask for. However,","[""Hailey"",""her daughter""]",bare,Contrast,varied,19,177,1,her daughter refused.,non_pro,T
+3396,7269592,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,he was able to provide information as to what was happening.,pro,T
+2226,12652081,LIST2,"Peter criticized Jeffery for saying these things. After that,","[""Peter"",""Jeffery""]",bare,Narration,varied,26,115,1,Jeffery was unhappy with Peter,non_pro,T
+5256,16379415,LIST1,John had fought against Hector. But,"[""John"",""Hector""]",bare,Contrast,original,23,58,0,he could not prevail,pro,T
+570,124312,LIST1,"Felix made a sign for Paul to speak. After that,","[""Felix"",""Paul""]",bare,Narration,varied,16,73,0,felix gave it to Paul.,non_pro,T
+1100,14089229,LIST2,Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Two kilometers later,"[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Narration,original,2,7,1,Kriner re-took the lead,non_pro,T
+2092,13783915,LIST3,"At noon Friday, Patrick Buchanan advised Richard Rahn, the Chamber's chief economist, that the White House would not agree to a budget reconciliation bill unless it had firm assurances that a vote on substance would be permitted in the Senate. Therefore,","[""Patrick Buchanan"",""Richard Rahn, the Chamber's chief economist""]",bare,Result,varied,8,29,0,he didn't think it would be wise to write another bill.,pro,T
+3176,13925376,LIST3,"Adam refused to stop chasing Leo. Shortly afterwards,","[""Adam"",""Leo""]",bare,Narration,varied,11,157,0,He tripped and fell.,pro,T
+2338,7217742,LIST3,Felix made a sign for Paul to speak. But,"[""Felix"",""Paul""]",bare,Contrast,varied,16,147,0,He couldn’t use it,pro,T
+4002,12526391,LIST3,Joseph served Nicolas for three years. Then,"[""Joseph"",""Nicolas""]",bare,Narration,original,6,49,0,he moved onto other employment,pro,T
+2366,14299503,LIST5,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. However,","[""President Clinton"",""the Crown Prince""]",bare,Contrast,varied,27,123,1,the Crown Prince did not oblige.,non_pro,T
+4214,8804439,LIST2,David was moving as quickly as possible to get away from Saul. So,"[""David"",""Saul""]",bare,Result,varied,15,95,1,Saul increased his pace hoping to catch up.,non_pro,T
+134,2032687,LIST3,"Peter continued talking with Charlie. However,","[""Peter"",""Charlie""]",bare,Contrast,varied,25,39,0,he wished he could leave the conversation.,pro,T
+4954,3389654,LIST2,"Hailey told her daughter what to ask for. However,","[""Hailey"",""her daughter""]",bare,Contrast,varied,19,177,1,the daughter decided to rebel and ask for something else.,non_pro,T
+3420,10221389,LIST2,"William was afraid and refused to kill Saul. Shortly afterwards,","[""William"",""Saul""]",bare,Narration,varied,30,151,0,he got killed,pro,T
+924,2876904,LIST6,John felt sorry for the man. But,"[""John"",""the man""]",bare,Contrast,varied,22,88,0,He was unable to help.,pro,T
+5360,14649618,LIST5,Joseph served Nicolas for three years. But,"[""Joseph"",""Nicolas""]",bare,Contrast,varied,6,51,1,Nicolas dislikes him.,non_pro,T
+852,1883200,LIST2,"Senior U.S official James O'Brien will hold talks, probably behind closed doors, with President Vojislav Kostunica. So","[""Senoir U.S. official James O'Brien"",""President Vojislav Kostunica""]",bare,Result,original,28,131,0,that it was in private,pro,T
+926,2876904,LIST6,David was moving as quickly as possible to get away from Saul. But,"[""David"",""Saul""]",bare,Contrast,original,15,52,1,Saul was quicker than him.,non_pro,T
+4402,6053294,LIST2,"William was afraid and refused to kill Saul. Shortly afterwards,","[""William"",""Saul""]",bare,Narration,varied,30,151,0,he was approached by Saul who thanked him for his actions that night.,pro,T
+4302,9227153,LIST4,"David was moving as quickly as possible to get away from Saul. Later,","[""David"",""Saul""]",bare,Narration,varied,15,91,0,he ran into him by chance.,pro,T
+5976,10735347,LIST1,"Felix made a sign for Paul to speak. After that,","[""Felix"",""Paul""]",bare,Narration,varied,16,73,0,he waited,pro,T
+4508,6891901,LIST3,David had just let Leo leave in peace. So,"[""David"",""Leo""]",bare,Result,original,14,173,0,he started to tidy up,pro,T
+4424,243756,LIST4,"William was afraid and refused to kill Saul. However,","[""William"",""Saul""]",bare,Contrast,varied,30,153,0,he was coerced into doing so.,pro,T
+4416,243756,LIST4,"David was moving as quickly as possible to get away from Saul. Later,","[""David"",""Saul""]",bare,Narration,varied,15,91,0,he informed the authorities.,pro,T
+4080,16302666,LIST6,"Charles got up, left everything, and followed Thomas. However,","[""Charles"",""Thomas""]",bare,Contrast,varied,7,21,1,Thomas was too fast to catch upto,non_pro,T
+1102,14089229,LIST2,"Hailey told her daughter what to ask for. However,","[""Hailey"",""her daughter""]",bare,Contrast,varied,19,177,0,Hailey forgot,non_pro,T
+5816,14801215,LIST2,John felt sorry for the man. So,"[""John"",""the man""]",bare,Result,original,22,167,0,he went over and patted him on the back reassuringly.,pro,T
+4940,6359491,LIST6,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Therefore,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Result,varied,2,6,1,he now had a better chance of winning.,pro,T
+914,2876904,LIST6,David left the food with the man who kept supplies. Then,"[""David"",""the man who kept supplies""]",bare,Narration,original,9,26,1,It was all put in the fridge for later.,pro,T
+4744,13416907,LIST2,"William was afraid and refused to kill Saul. Shortly afterwards,","[""William"",""Saul""]",bare,Narration,varied,30,151,1,Saul turned on William.,non_pro,T
+4378,1286318,LIST1,Peter continued talking with Charlie. Then,"[""Peter"",""Charlie""]",bare,Narration,original,25,32,1,Charlie left to speak with Michelle.,non_pro,T
+234,16516386,LIST4,Peter criticized Jeffery for saying these things. But,"[""Peter"",""Jeffery""]",bare,Contrast,original,26,117,0,he knew he was telling the truth.,pro,T
+4576,1778955,LIST4,"Benjamin Netanyahu has recently moved ahead of Ehud Barak in popularity polls. As a result,","[""Benjamin Netanyahu"",""Ehud Barak""]",bare,Result,varied,13,71,1,Ehud Barak did some more canvassing.,non_pro,T
+3928,16541798,LIST5,Felix made a sign for Paul to speak. So,"[""Felix"",""Paul""]",bare,Result,original,16,149,0,he can communicate,pro,T
+2538,11861189,LIST6,David was moving as quickly as possible to get away from Saul. But,"[""David"",""Saul""]",bare,Contrast,original,15,52,1,Saul was quicker.,non_pro,T
+1968,13001928,LIST3,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. Later,","[""President Clinton"",""the Crown Prince""]",bare,Narration,varied,27,121,1,it was reported that the Crown Prince would speak to the FBI shortly.,pro,T
+3390,7269592,LIST2,"William was afraid and refused to kill Saul. Shortly afterwards,","[""William"",""Saul""]",bare,Narration,varied,30,151,1,saul killed him instead.,non_pro,T
+5612,3546926,LIST2,"Senior U.S official James O'Brien will hold talks, probably behind closed doors, with President Vojislav Kostunica. So","[""Senoir U.S. official James O'Brien"",""President Vojislav Kostunica""]",bare,Result,original,28,131,0,we expect an update shortly.,pro,T
+3092,2574191,LIST4,Jose gave the silver and the gold to Peter. So,"[""Jose"",""Peter""]",bare,Result,varied,24,107,1,Peter put it somewhere safe,non_pro,T
+214,16516386,LIST4,"John felt sorry for the man. Later,","[""John"",""the man""]",bare,Narration,varied,22,163,1,he checked back to see if he was ok.,pro,T
+1584,5449709,LIST2,"William was afraid and refused to kill Saul. Shortly afterwards,","[""William"",""Saul""]",bare,Narration,varied,30,151,1,Saul attacked him,non_pro,T
+622,14360534,LIST4,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. However,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Contrast,varied,2,9,0,he fell on the third.,pro,T
+2130,4640906,LIST3,"President Clinton at that meeting did press the Crown Prince to cooperate with the FBI. Later,","[""President Clinton"",""the Crown Prince""]",bare,Narration,varied,27,121,1,the Crown Prince agreed to cooperate.,non_pro,T
+918,2876904,LIST6,William was afraid and refused to kill Saul. So,"[""William"",""Saul""]",bare,Result,original,30,78,0,He ran and hid.,pro,T
+240,4701919,LIST2,"Peter criticized Jeffery for saying these things. After that,","[""Peter"",""Jeffery""]",bare,Narration,varied,26,115,1,Jeffery stayed quiet.,non_pro,T
+5790,14801215,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,Mr. Brady decided to call back later when she was less busy.,non_pro,T
+2774,7050017,LIST5,"Jack said to another man, ""Follow me!"" Therefore,","[""Jack"",""another man""]",bare,Result,varied,21,113,0,he clearly liked him,pro,T
+5962,10977958,LIST5,"At noon Friday, Patrick Buchanan advised Richard Rahn, the Chamber's chief economist, that the White House would not agree to a budget reconciliation bill unless it had firm assurances that a vote on substance would be permitted in the Senate. Two hours later,","[""Patrick Buchanan"",""Richard Rahn, the Chamber's chief economist""]",bare,Narration,original,8,25,0,he changed his mind,pro,T
+5066,6578168,LIST5,Peter continued talking with Charlie. So,"[""Peter"",""Charlie""]",bare,Result,varied,25,41,0,he would better understand,pro,T
+2596,5654296,LIST6,"Jose gave the silver and the gold to Peter. After that,","[""Jose"",""Peter""]",bare,Narration,varied,24,62,0,he left,pro,T
+5146,10526983,LIST4,"William was afraid and refused to kill Saul. However,","[""William"",""Saul""]",bare,Contrast,varied,30,153,0,he knew that someone else would attempt it soon.,pro,T
+1442,12506341,LIST5,"Senate Majority Leader George Mitchell (D-Maine), who has been the most prominent Democratic critic of Mr. Bush's handling of the Soviet relationship, praised the president for arranging the meeting. After that,","[""Senate Majority Leader George Mitchell (D-Maine)"",""the president""]",bare,Narration,varied,10,61,0,he was on side with him,pro,T
+844,1883200,LIST2,"Fortunately President Hu Jintao was magnanimous enough not to take it to heart, and gave Canadian Prime Minister Stephen Harper the honor of a 15-minute meeting. After that,","[""President Hu Jintao"",""Canadian Prime Minister Stephen Harper""]",bare,Narration,varied,18,79,0,he went home and thought about it,pro,T
+5192,16351310,LIST4,"Fortunately President Hu Jintao was magnanimous enough not to take it to heart, and gave Canadian Prime Minister Stephen Harper the honor of a 15-minute meeting. However,","[""President Hu Jintao"",""Canadian Prime Minister Stephen Harper""]",bare,Contrast,original,18,81,0,he was late,pro,T
+4338,5464736,LIST2,"Fortunately President Hu Jintao was magnanimous enough not to take it to heart, and gave Canadian Prime Minister Stephen Harper the honor of a 15-minute meeting. After that,","[""President Hu Jintao"",""Canadian Prime Minister Stephen Harper""]",bare,Narration,varied,18,79,0,he refeused to extend the meeting again,pro,T
+2478,3156180,LIST1,"Jack said to another man, ""Follow me!"" After that,","[""Jack"",""another man""]",bare,Narration,varied,21,68,1,he proceeded up the hill.,pro,T
+5528,6476242,LIST4,"Benjamin Netanyahu has recently moved ahead of Ehud Barak in popularity polls. As a result,","[""Benjamin Netanyahu"",""Ehud Barak""]",bare,Result,varied,13,71,0,he won the election.,pro,T
+1264,9409789,LIST3,"Jack said to another man, ""Follow me!"" But","[""Jack"",""another man""]",bare,Contrast,original,21,111,1,the man did not follow.,non_pro,T
+2200,6568516,LIST5,Adam refused to stop chasing Leo. But,"[""Adam"",""Leo""]",bare,Contrast,varied,11,159,1,"Leo had had enough, turned around and hit Adam to make him stop.",non_pro,T
+4818,12497434,LIST2,David was moving as quickly as possible to get away from Saul. So,"[""David"",""Saul""]",bare,Result,varied,15,95,0,he took the short cut through the park and ran.,pro,T
+546,14097695,LIST3,"In 1975, Mr. Pamplin enticed Mr. Hahn into joining the company as executive vice president in charge of chemicals; the move befuddled many in Georgia-Pacific who didn't believe a university administrator could make the transition to the corporate world. But","[""Mr. Pamplin"",""Mr. Hahn""]",bare,Contrast,original,20,75,1,he is doing a very good job.,pro,T
+2714,15025033,LIST2,John felt sorry for the man. So,"[""John"",""the man""]",bare,Result,original,22,167,0,he gave him some money.,pro,T
+2096,13783915,LIST3,"Peter continued talking with Charlie. However,","[""Peter"",""Charlie""]",bare,Contrast,varied,25,39,0,he wasn't actually listening.,pro,T
+4960,3389654,LIST2,Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Two kilometers later,"[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Narration,original,2,7,0,he was clear in the lead and passed through the finish line.,pro,T
+3296,15971718,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,he had chosen to take quick action in light of the news.,pro,T
+4288,9948503,LIST1,"Felix made a sign for Paul to speak. After that,","[""Felix"",""Paul""]",bare,Narration,varied,16,73,1,Paul asked the question that had been on his mind.,non_pro,T
+2654,689251,LIST2,Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Two kilometers later,"[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Narration,original,2,7,0,he had fallen and was overtaken by david,pro,T
+2796,4402535,LIST1,David had just let Leo leave in peace. But,"[""David"",""Leo""]",bare,Contrast,varied,14,94,0,he had misread the situation.,pro,T
+3038,8096335,LIST2,"And Lehia's been with her mom for two months. However,","[""Lehia"",""her mom""]",bare,Contrast,varied,12,141,0,she wants to return home again.,pro,T
+4400,6053294,LIST2,Jose gave the silver and the gold to Peter. But,"[""Jose"",""Pater""]",bare,Contrast,original,24,105,0,he kept the most valuable pieces for himself,pro,T
+4656,5254820,LIST6,John felt sorry for the man. But,"[""John"",""the man""]",bare,Contrast,varied,22,88,0,there was really nothing he could do.,pro,F
+992,5277332,LIST5,"For balance, and in hopes of gaining some disaffected centrist votes, Mr. Papandreou managed to attract Mr. Makris, a former New Democracy Party representative and known political enemy of Mr. Mitsotakis. After that,","[""Mr. Papandreou "",""Mr. Makris""]",bare,Narration,varied,17,133,0,he looked for more support.,pro,T
+5814,14801215,LIST2,David was moving as quickly as possible to get away from Saul. So,"[""David"",""Saul""]",bare,Result,varied,15,95,1,Saul decided to quicken his pace behind David.,non_pro,T
+114,11378978,LIST2,"Mr. Brady was quickly on the phone with Mr. Mullins, who in turn was talking with the chairmen of the New York and Chicago exchanges. So","[""Mr. Brady"",""Mr. Mullins""]",bare,Result,varied,5,23,0,he forgot his keys.,pro,T
+5442,13824290,LIST6,Peter criticized Jeffery for saying these things. So,"[""Peter"",""Jeffery""]",bare,Result,varied,26,47,1,Jeffery didn’t like him,non_pro,T
+2544,11861189,LIST6,William was afraid and refused to kill Saul. So,"[""William"",""Saul""]",bare,Result,original,30,78,0,he ran away.,pro,T
+2158,4640906,LIST3,"Adam refused to stop chasing Leo. Shortly afterwards,","[""Adam"",""Leo""]",bare,Narration,varied,11,157,1,Leo turned on Adam and insisted he stop.,non_pro,T
+1434,4487598,LIST1,David had just let Leo leave in peace. But,"[""David"",""Leo""]",bare,Contrast,varied,14,94,0,he would be back.,pro,T
+2370,1182632,LIST2,"And Lehia's been with her mom for two months. However,","[""Lehia"",""her mom""]",bare,Contrast,varied,12,141,0,she must leave soon.,pro,T
+5714,16035662,LIST1,David had just let Leo leave in peace. But,"[""David"",""Leo""]",bare,Contrast,varied,14,94,0,he quickly changed his mind.,pro,T
+1920,1921090,LIST6,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Therefore,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Result,varied,2,6,0,he was the winner.,pro,T
+2444,11319780,LIST6,"Jose gave the silver and the gold to Peter. After that,","[""Jose"",""Peter""]",bare,Narration,varied,24,62,0,he gave the bronze to Joe.,pro,T
+5336,5139145,LIST4,Jose gave the silver and the gold to Peter. So,"[""Jose"",""Pater""]",bare,Result,varied,24,107,1,Peter put it in the safe.,non_pro,T
+4856,11803982,LIST5,Joseph served Nicolas for three years. But,"[""Joseph"",""Nicolas""]",bare,Contrast,varied,6,51,1,"when Nicholas retired, Joseph had to find someone else to serve.",non_pro,T
+2546,11861189,LIST6,"Fortunately President Hu Jintao was magnanimous enough not to take it to heart, and gave Canadian Prime Minister Stephen Harper the honor of a 15-minute meeting. So","[""President Hu Jintao"",""Canadian Prime Minister Stephen Harper""]",bare,Result,varied,18,42,1,he planned important questions to ask.,pro,T
+5140,10526983,LIST4,Jose gave the silver and the gold to Peter. So,"[""Jose"",""Peter""]",bare,Result,varied,24,107,1,now Peter was a rich man.,non_pro,T
+170,315014,LIST2,John felt sorry for the man. So,"[""John"",""the man""]",bare,Result,original,22,167,0,he gave his some cash.,pro,T
+2704,15025033,LIST2,"Peter criticized Jeffery for saying these things. After that,","[""Peter"",""Jeffery""]",bare,Narration,varied,26,115,1,Jeffery apologised.,non_pro,T
+2960,10798364,LIST2,Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. Two kilometers later,"[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Narration,original,2,7,0,he crashed and gave up first place.,pro,T
+4376,1286318,LIST1,"In 1975, Mr. Pamplin enticed Mr. Hahn into joining the company as executive vice president in charge of chemicals; the move befuddled many in Georgia-Pacific who didn't believe a university administrator could make the transition to the corporate world. After that,","[""Mr. Pamplin"",""Mr. Hahn""]",bare,Narration,varied,20,37,1,Mr Hahn always felt like he had something to prove.,non_pro,T
+2976,11623492,LIST4,"Christian Hummer overtook Austrian David Kriner who placed second in the ski jump after about one kilometer. However,","[""Christian Hummer"",""Austrian David Kriner who placed second in the ski jump after about one kilometer""]",bare,Contrast,varied,2,9,1,Kriner is determined to come back stronger next time,non_pro,T
+3972,9144868,LIST1,Adam refused to stop chasing Leo. So,"[""Adam"",""Leo""]",bare,Result,original,11,84,1,Leo punched him in the mouth,non_pro,T
+5720,16035662,LIST1,"Joseph served Nicolas for three years. Therefore,","[""Joseph"",""Nicolas""]",bare,Result,varied,6,17,0,he cannot be fired without cause.,pro,T
+152,315014,LIST2,Philip went and told Andrew. Then,"[""Philip"",""Andrew""]",bare,Narration,original,3,43,0,he went home.,pro,T
+962,9711183,LIST3,David had just let Leo leave in peace. So,"[""David"",""Leo""]",bare,Result,original,14,173,1,Leo started walking away,non_pro,T
+4808,12497434,LIST2,"Charles got up, left everything, and followed Thomas. So","[""Charles"",""Thomas""]",bare,Result,varied,7,59,1,Thomas felt in control.,non_pro,T
+846,1883200,LIST2,"And Lehia's been with her mom for two months. However,","[""Lehia"",""her mom""]",bare,Contrast,varied,12,141,0,she doesn't like him,pro,T

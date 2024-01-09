@@ -14,7 +14,14 @@ library(dplyr)
 library(reshape2)
 library(gridExtra) 
 library(lme4)
+library(brms)
 library(emmeans)
+library(bridgesampling)
+
+### brms settings ###
+chns <- 4
+iters <- 4000
+warmups <- 2000
 
 # set the source file direction as working directory
 setwd(dirname(getSourceEditorContext()$path))
@@ -41,7 +48,7 @@ named.contr.sum<-function(x, ...) {
 df <- read.csv(file = '../extracted_passages/ontonotes_extracted_passages.csv', header = TRUE)
 df_narration <- subset(df, df$coherence_relation == 'narration') #985
 df_result <- subset(df, df$coherence_relation == 'result') #1330
-df_contrast <- subset(df, df$coherence_relation == 'contrast')
+df_contrast <- subset(df, df$coherence_relation == 'contrast') #2572
 
 # --- next mention frequency/coreference type ---
 # counts: subject coref, non-subject coref 
@@ -191,19 +198,20 @@ df  = df  %>%
     coreference_type = as.factor(coreference_type),
     X12person = as.factor(X12person),
     proAntecedent = as.factor(proAntecedent),
-    antecedentType = as.factor(subj_antecedent_type)
+    antecedentType = as.factor(subj_antecedent_type),
+    document_id = as.factor(document_id)
   )
 str(df)
 
-### sum coding ###
-# contrasts(df$relation)=named.contr.sum(levels(df$relation))
 
 # Build the mixed-effects logistic regression model
+# Frequentist framework
 
-model_verb <- glmer(subject_or_not ~ relation  + (1 + relation | verb) , 
+model_verb <- glmer(subject_or_not ~ relation  + (1 + relation | verb) + (1 | document_id) , 
                     data = df, family = binomial,
                     control = glmerControl(optimizer = "bobyqa") )
 summary(model_verb)
+
 
 # --- Conduct post-hoc comparisons ---
 emmeans_model <- emmeans(model_verb, ~ relation)
@@ -233,23 +241,16 @@ df_subj <- df_subj %>%
   )
 
 # Relevel the coreference_type variable
-# df_noOther$coreference_type <- relevel(df_noOther$coreference_type, ref = "subject")
-#df_subj$X12person <- relevel(df_subj$X12person, ref = "True")
-#df_subj$proAntecedent <- relevel(df_subj$proAntecedent, ref = "pronoun")
 df_subj$antecedentType <- relevel(df_subj$antecedentType, ref="non_pronoun")
 
+# Frequentist framework
 
-### sum coding ###
-#contrasts(df_noOther$relation)=named.contr.sum(levels(df_noOther$relation))
-#contrasts(df_noOther$coreference_type)=named.contr.sum(levels(df_noOther$coreference_type))
-#contrasts(df_subj$X12person)=named.contr.sum(levels(df_subj$X12person))
-#contrasts(df_subj$proAntecedent)=named.contr.sum(levels(df_subj$proAntecedent))
-#contrasts(df_subj$antecedentType)=named.contr.sum(levels(df_subj$antecedentType))
+model_pro <- glmer(pronominalization ~ relation*coreference_type +  (1 | document_id) + 
+                     (1 | verb),
+                  data = df_noOther , family = binomial,
+                  control = glmerControl(optimizer = "bobyqa"))
 
-model_pro <- glmer(pronominalization ~ relation*coreference_type +  (1 | document_id), 
-                   data = df_noOther , family = binomial)
 summary(model_pro)
- 
 
 # Conduct post-hoc comparisons
 emmeans_model <- emmeans(model_pro, ~ relation|coreference_type)
@@ -259,6 +260,51 @@ pairwise_comparisons <- pairs(emmeans_model)
 
 # Summarize the results
 summary(pairwise_comparisons)
+
+##### Bayes Factors ####
+# Bayesian framework
+# define weakly informative prior: Cauchy distribution with center 0 and scale 2.5
+myPrior <- c(prior(cauchy(0,2.5), class = "b"),
+             prior(cauchy(0,2.5), class = "sd"))
+
+model_pro_bayes <- brm(
+  pronominalization ~ relation*coreference_type +  (1 | document_id),
+  data = df_noOther,
+  family = 'bernoulli',
+  iter = 10000,
+  chains = 4,
+  prior = myPrior,
+  save_pars = save_pars(all = TRUE),
+  cores = 6
+)
+
+# Save the brmsfit object to an RDS file
+#saveRDS(model_pro_bayes, file = "model_pro_bayes.rds")
+#model_pro_bayes <- readRDS("model_pro_bayes.rds")
+
+# summary(model_pro_bayes)
+
+model_pro_bayes_null <- brm(
+  pronominalization ~ coreference_type +  (1 | document_id),
+  data = df_noOther,
+  family = 'bernoulli',
+  iter = 10000,
+  chains = 4,
+  prior = myPrior,
+  save_pars = save_pars(all = TRUE),
+  cores = 6
+)
+
+
+alternative <- bridgesampling::bridge_sampler(model_pro_bayes, silent = TRUE)
+null <- bridgesampling::bridge_sampler(model_pro_bayes_null, silent = TRUE)
+
+bf <- bayes_factor(alternative, null)
+1/bf[[1]]
+bf
+
+
+
 
 
 ##### Appendix B.2: Robustness test of pronoun production analysis #####
@@ -577,25 +623,26 @@ df2  = df2  %>%
     pronominalization = as.factor(pronominalization),
     coreference_type = as.factor(coreference_type),
     X12person = as.factor(X12person),
-    proAntecedent = as.factor(proAntecedent)
+    proAntecedent = as.factor(proAntecedent),
+    document_id = as.factor(document_id)
   )
 str(df2)
 
-### sum coding ###
-# contrasts(df2$relation)=named.contr.sum(levels(df2$relation))
-
 
 # Build the mixed-effects logistic regression model
+# Frequentist framework
 # too few data for the random structure
-model <- glmer(subject_or_not ~ relation  + (1 + relation | verb) , 
-               data = df2, family = binomial,
-               control = glmerControl(optimizer = "bobyqa") )
+#model <- glmer(subject_or_not ~ relation  + (1 + relation | verb) , 
+#               data = df2, family = binomial,
+#               control = glmerControl(optimizer = "bobyqa") )
 
 # final model
-model_verb <- glmer(subject_or_not ~ relation  + (1 | verb) , 
-                    data = df2, family = binomial,
-                    control = glmerControl(optimizer = "bobyqa") )
+model_verb <- glmer(subject_or_not ~ relation  + (1 | verb) + (1 | document_id) ,
+                   data = df2, family = binomial,
+                   control = glmerControl(optimizer = "bobyqa") )
 summary(model_verb)
+
+
 
 # --- Conduct post-hoc comparisons ---
 emmeans_model <- emmeans(model_verb, ~ relation)
@@ -620,31 +667,57 @@ df2_noOther$coreference_type <- droplevels(df2_noOther$coreference_type)
 df2_subj$X12person <- droplevels(df2_subj$X12person)
 df2_subj$proAntecedent <- droplevels(df2_subj$proAntecedent)
 
-# Relevel the coreference_type variable
-#df2_noOther$coreference_type <- relevel(df2_noOther$coreference_type, ref = "non_subject")
-#df2_subj$X12person <- relevel(df2_subj$X12person, ref = "FALSE")
-#df2_subj$proAntecedent <- relevel(df2_subj$proAntecedent, ref = "TRUE")
-
-# sum coding #
-#contrasts(df2_noOther$relation)=named.contr.sum(levels(df2_noOther$relation))
-#contrasts(df2_noOther$coreference_type)=named.contr.sum(levels(df2_noOther$coreference_type))
-#contrasts(df2_subj$X12person)=named.contr.sum(levels(df2_subj$X12person))
-#contrasts(df2_subj$proAntecedent)=named.contr.sum(levels(df2_subj$proAntecedent))
-
-
-model_pro_rstdt <- glmer(pronominalization ~ relation*coreference_type +  (1 | document_id), 
-                         data = df2_noOther , family = binomial)
+# Frequentist framework
+model_pro_rstdt <- glmer(pronominalization ~ relation*coreference_type +  (1 | document_id)   ,
+                        data = df2_noOther , family = binomial)
 summary(model_pro_rstdt)
 
-
 # --- Conduct post-hoc comparisons ---
-emmeans_model <- emmeans(model_pro_rstdt, ~ relation|coreference_type)
+emmeans_model <- emmeans(model_pro, ~ relation|coreference_type)
 
 # Obtain pairwise comparisons
 pairwise_comparisons <- pairs(emmeans_model)
 
 # Summarize the results
 summary(pairwise_comparisons)
+
+##### Bayes Factors ####
+# Bayesian framework
+model_pro_bayes_rstdt <- brm(
+  pronominalization ~ relation*coreference_type  + (1 | document_id),
+  data = df2_noOther,
+  family = 'bernoulli',
+  iter = 10000,
+  chains = 4,
+  prior = myPrior,
+  save_pars = save_pars(all = TRUE),
+  cores = 6
+ )
+
+#saveRDS(model_pro_bayes_rstdt, file = "model_pro_bayes_rstdt_bayesfactor.rds")
+
+model_pro_bayes_null_rstdt <- brm(
+  pronominalization ~ coreference_type  + (1 | document_id),
+  data = df2_noOther,
+  family = 'bernoulli',
+  iter = 10000,
+  chains = 4,
+  prior = myPrior,
+  save_pars = save_pars(all = TRUE),
+  cores = 6
+)
+
+#saveRDS(model_pro_bayes_null_rstdt, file = "model_pro_bayes_null_rstdt_bayesfactor.rds")
+
+
+alternative <- bridgesampling::bridge_sampler(model_pro_bayes_rstdt, silent = TRUE)
+null <- bridgesampling::bridge_sampler(model_pro_bayes_null_rstdt, silent = TRUE)
+
+bf <- bayes_factor(alternative, null)
+1/bf[[1]]
+bf 
+
+
 
 ##### limited number of samples with pronominal antecedents in RST-DT #####
 # See Appendix B.2 Robustness test of pronoun production analysis

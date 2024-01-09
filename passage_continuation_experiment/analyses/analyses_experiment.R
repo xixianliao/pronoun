@@ -23,6 +23,7 @@ library(rstudioapi)
 library(tidyverse)
 library(xtable)
 library(gridExtra)
+library(bridgesampling)
 
 #### brms settings####
 chns <- 6
@@ -65,12 +66,7 @@ str(df_bare)
 # sumContrast
 df_bare$relationSum <- factor(df_bare$relation, levels = c("Narration", "Contrast", "Result"))
 contrasts(df_bare$relationSum) = contr.sum(3)
-# contrasts(df_bare$relationSum)
-# relationSum1: Narration, relationSum2: Contrast
-#           [,1] [,2]
-# Narration   1    0
-# Contrast    0    1
-# Result     -1   -1
+
 
 
 null.full <- glmer(nullOrNot ~ relationSum + 
@@ -134,6 +130,7 @@ df_main.pronoun = subset(df_main, promptSum == 1) # 2,815 datapoints
 # check_convergence(prior.full.singular, tolerance = 0.00001) #TRUE, gradient: 1.024748e-06
 # summary(prior.full.singular)
 
+
 # --- alternative model with no singular warning ---
 prior.full <- glmer(reMention ~ relationSum +
                        (1 | subject_id) +
@@ -143,6 +140,8 @@ prior.full <- glmer(reMention ~ relationSum +
 
 check_convergence(prior.full, tolerance = 0.00001) #TRUE
 # anova(prior.full, prior.full.singular) # p = 0.9983
+
+##### Table 11: Summary of logit mixed effect models of next mention with a fixed effect for the 3-level discourse relation type #####
 summary(prior.full)
 Anova(prior.full)
 # Chisq Df Pr(>Chisq)    
@@ -240,16 +239,9 @@ mcmc_plot(likelihood.full.bayes, type = "trace")
 pp_check(likelihood.full.bayes)
 
 
-##### Table 11: Summary of logit mixed effect models of pronoun production (with all predictors centered) #####
+
+##### Table 12: Summary of logit mixed effect models of pronoun production (with all predictors centered) #####
 summary(likelihood.full.bayes)
-# Population-Level Effects: 
-#                                         Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
-# Intercept                                 1.03      0.30     0.47     1.63 1.00     1538     3092
-# relationSumNarration                     -0.05      0.24    -0.51     0.42 1.00     2465     3336
-# relationSumResult                         0.17      0.21    -0.24     0.61 1.00     2367     3096
-# subjectOrNotSum1                          2.71      0.32     2.12     3.39 1.01     1312     1972
-# relationSumNarration:subjectOrNotSum1     0.36      0.26    -0.15     0.92 1.00     2232     2759
-# relationSumResult:subjectOrNotSum1       -0.32      0.25    -0.79     0.18 1.00     1934     2311
 
 # plot marginal effects
 # conditional_effects(likelihood.full.bayes)
@@ -275,6 +267,43 @@ summary(likelihood.full.bayes)
 # # --- post hoc comparison ---
 # ems <- emmeans(likelihood.full.bayes, ~relationSum, by = c("subjectOrNotSum"))
 # summary(pairs(ems), point.est = mean)
+
+##### Bayes Factors #####
+likelihood.full.bayes.alternative <-  brm(pronounOrNot ~ relationSum * subjectOrNotSum +
+                                (1 | subject_id) +
+                                (1  | itemID),
+                              data = df_main.bare, family = 'bernoulli',
+                              iter = 4000,
+                              chains = chns,
+                              prior = myPrior,
+                              save_pars = save_pars(all = TRUE),
+                              cores = 6,
+                              control = list(adapt_delta = 0.9)
+)
+
+
+likelihood.full.bayes.null <-  brm(pronounOrNot ~ subjectOrNotSum +
+                                     (1 | subject_id) +
+                                     (1 | itemID),
+                                   data = df_main.bare, family = 'bernoulli',
+                                   iter = 4000,
+                                   chains = chns,
+                                   prior = myPrior,
+                                   save_pars = save_pars(all = TRUE),
+                                   cores = 6,
+                                   control = list(adapt_delta = 0.9)
+)
+
+
+
+alternative <- bridgesampling::bridge_sampler(likelihood.full.bayes.alternative, silent = TRUE)
+null <- bridgesampling::bridge_sampler(likelihood.full.bayes.null, silent = TRUE)
+
+bf <- bayes_factor(alternative, null)
+1/bf[[1]]
+bf
+
+
 
 
 #### Figure 7: Pronominalization rates by grammatical roles and relation types ####
@@ -367,7 +396,7 @@ pairs(m)
 # Result - Contrast     -0.0027 0.226 Inf  -0.012  0.9999
 
 
-##### Table 12: Summary of logit mixed effect models of next mention with the fully crossed factors of Relation Type*Prompt Type #####
+##### Table 13: Summary of logit mixed effect models of next mention with the fully crossed factors of Relation Type*Prompt Type #####
 summary(post.full.noSingular)
 #xtable(coef(summary(post.full.noSingular)))
 #                                 Estimate Std. Error z value Pr(>|z|)    
@@ -414,17 +443,34 @@ MSE_MIRROR
 # Expectancy 	    0.09660211
 # Mirror 		      0.06312082
 
-##### Table 14: Results of statistical metrics for model comparisons #####
+
+#--- Average Cross Entropy (ACE)---
+ACE_EXPECTANCY = mean(-(df_model_pred_subj$observedPosterior * log2(df_model_pred_subj$EXPECTANCY_smoothed) + (1 - df_model_pred_subj$observedPosterior) * log2(1 - df_model_pred_subj$EXPECTANCY_smoothed)))
+ACE_BAYESIAN = mean(-(df_model_pred_subj$observedPosterior * log2(df_model_pred_subj$BAYESIAN_smoothed) + (1 - df_model_pred_subj$observedPosterior) * log2(1 - df_model_pred_subj$BAYESIAN_smoothed)))
+ACE_MIRROR = mean(-(df_model_pred_subj$observedPosterior * log2(df_model_pred_subj$MIRROR_smoothed) + (1 - df_model_pred_subj$observedPosterior) * log2(1 - df_model_pred_subj$MIRROR_smoothed)))
+
+ACE_EXPECTANCY 
+ACE_BAYESIAN
+ACE_MIRROR 
+
+# model        		ACE
+# Bayesian 	      0.5769360132
+# Expectancy 	    0.8175563123
+# Mirror 		      0.708791092
+
+
+##### Table 15: Results of statistical metrics for model comparisons #####
 metrics_df <- data.frame(
-  Metric = c("R squared", "MSE"),
-  Bayes = round(c(r_squared_BAYESIAN_smoothed, MSE_BAYESIAN), 2),
-  Expectancy = round(c(r_squared_EXPECTANCY_smoothed, MSE_EXPECTANCY), 2),
-  Mirror = round(c(r_squared_MIRROR_smoothed, MSE_MIRROR), 2)
+  Metric = c("R squared", "MSE", "ACE"),
+  Bayes = round(c(r_squared_BAYESIAN_smoothed, MSE_BAYESIAN, ACE_BAYESIAN), 2),
+  Expectancy = round(c(r_squared_EXPECTANCY_smoothed, MSE_EXPECTANCY, ACE_EXPECTANCY), 2),
+  Mirror = round(c(r_squared_MIRROR_smoothed, MSE_MIRROR, ACE_MIRROR), 2)
 )
 metrics_df
 # Metric    Bayes Expectancy Mirror
 # R squared  0.50       0.43   0.03
 #       MSE  0.03       0.10   0.06
+#       ACE  0.58       0.82   0.71
 
 ##### Figures 8 & 9: scatter plot #####
 

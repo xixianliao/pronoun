@@ -1,0 +1,61 @@
+*** Description for each column in model_prediction.csv ***
+
+
+
+- Counts for the bare-prompt condition:
+countNP1: number of continuations where NP1 is the first mention in the bare-prompt condition
+countNP2: number of continuations where NP2 is the first mention in the bare-prompt condition
+countTotalNP12Remention: sum of countNP1 and countNP2
+countNP1_smoothed: countNP1 + 2
+countNP2_smoothed: countNP2 + 2
+countTotalNP12Remention_smoothed: countTotalNP12Remention + 4
+countOvertProNP1: number of continuations where NP1 is the first mention and is referred to using an overt pronoun in the bare-prompt condition
+countOvertProNP2:  number of continuations where NP2 is the first mention and is referred to using an overt pronoun in the bare-prompt condition
+countOvertProNP1_smoothed: countOvertProNP1 + 1
+countOvertProNP2_smoothed: countOvertProNP2 + 1
+
+- Counts for the pronoun-prompt condition:
+countPromptPro: total number of continuations for the item in the pronoun-prompt condition
+countNP12GivenPro: sum of countNP1GivenPro and countNP2GivenPro
+countNP1GivenPro: number of continuations where NP1 is the first mention in the pronoun-prompt condition
+countNP2GivenPro: number of continuations where NP2 is the first mention in the pronoun-prompt condition  
+
+NP1GivenPro: countNP1GivenPro/countNP12GivenPro i.e. proportion of NP1 continuations in the pronoun-prompt condition
+NP2GivenPro: countNP2GivenPro/countNP12GivenPro i.e. proportion of NP2 continuations in the pronoun-prompt condition
+NP1Prior: countNP1/countTotalNP12Remention i.e. proportion of NP1 continuations in the bare-prompt condition
+NP2Prior: countNP2/countTotalNP12Remention i.e. proportion of NP2 continuations in the bare-prompt condition 
+NP1PriorSmoothed: countNP1_smoothed/countTotalNP12Remention_smoothed
+NP2PriorSmoothed: countNP2_smoothed/countTotalNP12Remention_smoothed
+proGivenNP1: countOvertProNP1/countNP1
+proGivenNP2: countOvertProNP2/countNP2
+proGivenNP1Smoothed: countOvertProNP1_smoothed/countNP1_smoothed
+proGivenNP2Smoothed: countOvertProNP2_smoothed/countNP2_smoothed
+
+EXPECTANCY: 
+	if ref == ‘subject’, EXPECTANCY = NP1Prior
+        if ref == ‘nonsubject’, EXPECTANCY =  NP2Prior
+
+BAYESIAN: 
+	if ref == ‘subject’, BAYESIAN =  (proGivenNP1 * NP1Prior) / ((proGivenNP1 * NP1Prior) + (proGivenNP2 * NP2Prior))
+        if ref == ‘nonsubject’, BAYESIAN =  (proGivenNP2 * NP2Prior) / ((proGivenNP1 * NP1Prior) + (proGivenNP2 * NP2Prior))
+
+MIRROR:
+	if ref == ‘subject’, MIRROR = proGivenNP1 / (proGivenNP1 + proGivenNP2)
+        if ref == ‘nonsubject’, MIRROR =   proGivenNP2 / (proGivenNP1 + proGivenNP2)
+
+
+EXPECTANCY_smoothed:
+	if ref == ‘subject’, EXPECTANCY_smoothed = NP1PriorSmoothed
+        if ref == ‘nonsubject’, EXPECTANCY_smoothed =  NP2PriorSmoothed
+
+BAYESIAN_smoothed:
+	if ref == ‘subject’, BAYESIAN_smoothed =  (proGivenNP1Smoothed * NP1PriorSmoothed) / ((proGivenNP1Smoothed * NP1PriorSmoothed) + (proGivenNP2Smoothed * NP2PriorSmoothed))
+        if ref == ‘nonsubject’, BAYESIAN_smoothed =  (proGivenNP2Smoothed * NP2PriorSmoothed) / ((proGivenNP1Smoothed * NP1PriorSmoothed) + (proGivenNP2Smoothed * NP2PriorSmoothed))
+
+MIRROR_smoothed:
+	if ref == ‘subject’, MIRROR_smoothed = proGivenNP1Smoothed / (proGivenNP1Smoothed + proGivenNP2Smoothed)
+        if ref == ‘nonsubject’, MIRROR_smoothed =   proGivenNP2Smoothed / (proGivenNP1Smoothed + proGivenNP2Smoothed)
+
+observedPosterior: 
+	if ref == ‘subject’, observedPosterior =NP1GivenPro
+        if ref == ‘nonsubject’, MIRROR_smoothed =  NP2GivenPro

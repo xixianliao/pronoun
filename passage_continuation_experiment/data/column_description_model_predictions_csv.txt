@@ -58,4 +58,4 @@ MIRROR_smoothed:
 
 observedPosterior: 
 	if ref == ‘subject’, observedPosterior =NP1GivenPro
-        if ref == ‘nonsubject’, MIRROR_smoothed =  NP2GivenPro
+        if ref == ‘nonsubject’, observedPosterior =  NP2GivenPro

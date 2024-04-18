@@ -1,4 +1,4 @@
-This repository contains the materials and scripts for the following paper:
+This repository contains the materials, scripts and a supplementary file for the following paper:
 
 *Comparing models of pronoun production and interpretation with observational and experimental evidence*.
 
@@ -42,5 +42,13 @@ To ensure smooth execution of the scripts, it is highly recommended that you **d
 * `pronominalization_check_result.csv`: manual examination result of automatically-annotated pronominalization
 
 `analyses`: contains R scripts for the statistical analyses, plots and model comparisons reported in the section "Experimental evaluation of Weak and Strong Bayes: Corpus passage continuation".  
+
+
+# Supplementary file
+ * Section A: More information in the corpus analyses with verb types
+ * Section B: More information in the analyses with discourse relations
+ * Section C: Analysis results excluding participants with low variation in referring expressions
+ * Section D: Comparison of pronoun interpretation models using Bayesian methods
+
 
 
